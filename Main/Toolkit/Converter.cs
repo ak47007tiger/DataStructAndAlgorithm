@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LeetCode.Main.ext {
-  class Ext {
+namespace LeetCode.Main.Toolkit {
+  class Converter {
     public int ToInteger(int[] array) {
       int r = 0;
       for (int i = 0; i < 31; i++)

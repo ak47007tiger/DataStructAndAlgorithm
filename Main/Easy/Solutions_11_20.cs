@@ -14,19 +14,6 @@ namespace LeetCode.Main.Easy {
       return (int)Math.Sqrt(x);
     }
 
-    /**
-    1 * a + 2 * b == n
-    求 a, b的组合数量
-    a: [0,n]
-     */
-    public int ClimbStairs(int n) {
-      var sum = 0;
-      for(var i = 0; i <= n; i++){
-        if((n - i) % 2 == 0){
-          sum++;
-        }
-      }
-      return sum;
-    }
+
   }
 }

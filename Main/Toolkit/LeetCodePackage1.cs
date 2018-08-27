@@ -3,14 +3,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 
-namespace LeetCode {
+namespace LeetCode.Main.Toolkit {
   public class TimeRecord {
     DateTime start;
     public void Start() {
       start = DateTime.Now;
     }
     public void End() {
-      Print.print(DateTime.Now - start);
+      Printer.print(DateTime.Now - start);
     }
     public void Invoke(Action action) {
       Start();
@@ -18,7 +18,8 @@ namespace LeetCode {
       End();
     }
   }
-  public class Print {
+  
+  public class Printer {
     public static void print<T>(T t) {
       Console.WriteLine(t);
     }
