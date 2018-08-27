@@ -12,8 +12,7 @@ public static void print<T>(T t) {
     }
 
     public static void Work(string[] args) {
-      var r = new AddBinaryClass().AddBinary("1010","1011");
-      print(r);
+      print(new Solutions_11_20().ClimbStairs(3));
       Console.ReadKey();
     }
   }
