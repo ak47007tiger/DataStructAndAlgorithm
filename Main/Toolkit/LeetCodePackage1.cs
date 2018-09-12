@@ -24,6 +24,10 @@ namespace LeetCode.Main.Toolkit {
       Console.WriteLine(t);
     }
 
+    public static void printFromat(string format, params object[] objs){
+      Console.WriteLine(string.Format(format, objs));
+    }
+
     public static void printArray<T>(T[] array) {
       for (int i = 0; i < array.Length - 1; i++) {
         Console.Write("{0},", array[i]);
