@@ -48,7 +48,9 @@ namespace LeetCode.Main.Easy {
     }
 
     bool IsMirror(TreeNode node1, TreeNode node2){
-      return false;
+      if(node1 == null && node2 == null) return true;
+      if(node1 == null || node2 == null) return false;
+      return node1.val == node2.val && IsMirror(node1.left, node2.right) && IsMirror(node1.right, node2.left);
     }
 
     public bool IsSymmetric1(TreeNode root) {
