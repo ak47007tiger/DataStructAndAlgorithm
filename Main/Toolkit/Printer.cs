@@ -16,9 +16,14 @@ namespace LeetCode.Main.Toolkit {
     public static void printArray<T>(T[] array) {
       for (int i = 0; i < array.Length - 1; i++) {
         Console.Write("{0},", array[i]);
-
       }
       print(array[array.Length - 1]);
+    }
+
+    public static void printEnumerable<T>(IEnumerable<T> enumerable) {
+      foreach (var item in enumerable) {
+        Console.Write("{0},", item);        
+      }
     }
   }
 }

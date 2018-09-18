@@ -1,4 +1,5 @@
 using System.Text;
+using System.Collections.Generic;
 namespace LeetCode.Main {
   using Toolkit;
   
@@ -9,6 +10,10 @@ namespace LeetCode.Main {
 
     public static void printArray<T>(T[] array) {
       Printer.printArray(array);
+    }
+
+    public static void printIEnumerable<T>(IEnumerable<T> enumerable){
+      Printer.printEnumerable(enumerable);
     }
 
     public static void printFormat(string format, params object[] objs){
