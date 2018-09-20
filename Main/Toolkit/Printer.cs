@@ -13,7 +13,7 @@ namespace LeetCode.Main.Toolkit {
       Console.WriteLine(string.Format(format, objs));
     }
 
-    public static void printArray<T>(T[] array) {
+    public static void printArray<T>(params T[] array) {
       for (int i = 0; i < array.Length - 1; i++) {
         Console.Write("{0},", array[i]);
       }

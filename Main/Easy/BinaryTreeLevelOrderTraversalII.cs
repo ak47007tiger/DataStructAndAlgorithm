@@ -38,25 +38,43 @@ namespace LeetCode.Main.Easy {
      */
     public IList<IList<int>> LevelOrderBottom(TreeNode root) {
       IList<IList<int>> levels = new List<IList<int>>();
-      List<List<TreeNode>> levelNodes = new List<List<TreeNode>>();
-      HashSet<TreeNode> parent1 = new HashSet<TreeNode>();
-      HashSet<TreeNode> parent2 = new HashSet<TreeNode>();
-      Queue<TreeNode> nodes = new Queue<TreeNode>();
-      nodes.Enqueue(root);
-      var level = 0;
-      while(nodes.Count > 0){
-        var node = nodes.Dequeue();
-        level++;
+      if(root == null){
+        return levels;
+      }
+      Queue<TreeNode> currentNodeQueue = new Queue<TreeNode>();
+      Queue<TreeNode> nextLevelNodes = new Queue<TreeNode>();
+      currentNodeQueue.Enqueue(root);
+      var currentLevel = new List<int>();
+      levels.Add(currentLevel);
+      var level = 1;
+      while(currentNodeQueue.Count > 0){
+        var node = currentNodeQueue.Dequeue();
+        currentLevel.Add(node.val);
         if(node.left != null){
-          nodes.Enqueue(node.left);
+          nextLevelNodes.Enqueue(node.left);
         }
         if(node.right != null){
-          nodes.Enqueue(node.right);
+          nextLevelNodes.Enqueue(node.right);
+        }
+        if(currentNodeQueue.Count == 0 && nextLevelNodes.Count > 0){
+          //go next layer
+          level++;
+          currentLevel = new List<int>();
+          levels.Add(currentLevel);
+          var temp = currentNodeQueue;
+          currentNodeQueue = nextLevelNodes;
+          nextLevelNodes = temp;
         }
       }
 
-      levels.Reverse();
-      return levels;
+      var array = levels.ToArray();
+      for(var i = 0; i < array.Length / 2; i++){
+        var to = array.Length - 1 - i;
+        var temp = array[to];
+        array[to] = array[i];
+        array[i] = temp;
+      }
+      return array;
     }
   }
 }

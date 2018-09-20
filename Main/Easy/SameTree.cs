@@ -37,12 +37,7 @@ Input:     1         1
 Output: false
  */
 namespace LeetCode.Main.Easy {
-  public class TreeNode {
-    public int val;
-    public TreeNode left;
-    public TreeNode right;
-    public TreeNode(int x) { val = x; }
-  }
+  
   public class SameTree {
     //
     /*

@@ -5,14 +5,17 @@ using LeetCode.Main.Easy;
 using LeetCode.Main.Toolkit;
 
 namespace LeetCode.Main {
-  public class Client : LeetCodeSolution{
+  public class Client : LeetCodeSolution {
     public static void Work(string[] args) {
-      print(new BestTimeToBuyAndSellStock().MaxProfit(
-        new int[]{7,1,5,3,6,4}
-      ));
-      print(new BestTimeToBuyAndSellStock().MaxProfit(
-        new int[]{7,6,4,3,1}
-      ));
+
+      var exc = new ExcelSheetColumnTitle();
+      print(exc.ConvertToTitle(1));
+      print(exc.ConvertToTitle(26));
+      print(exc.ConvertToTitle(27));
+      print(exc.ConvertToTitle(28));
+      print(exc.ConvertToTitle(29));
+      print(exc.ConvertToTitle(701));
+
       Console.ReadKey();
     }
   }

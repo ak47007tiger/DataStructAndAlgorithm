@@ -1,14 +1,23 @@
+using System;
 using System.Text;
 using System.Collections.Generic;
 namespace LeetCode.Main {
   using Toolkit;
   
   public class LeetCodeSolution {
+    static Random random = new Random((int)(System.DateTime.Now.Ticks >> 5));
+    public static int[] RandomData(int count){
+      var data = new int[count];
+      for(var i = 0; i < count; i++){
+        data[i] = random.Next(count);
+      }
+      return data;
+    }
     public static void print<T>(T t) {
       Printer.print(t);
     }
 
-    public static void printArray<T>(T[] array) {
+    public static void printArray<T>(params T[] array) {
       Printer.printArray(array);
     }
 
