@@ -17,6 +17,13 @@ namespace LeetCode.Main {
       Printer.print(t);
     }
 
+    public static void println(params object[] objs){
+      if(null != objs && objs.Length > 0){
+        print(objs);
+      }
+      Printer.print('\n');
+    }
+
     public static void printArray<T>(params T[] array) {
       Printer.printArray(array);
     }
