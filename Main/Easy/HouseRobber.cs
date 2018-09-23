@@ -34,6 +34,10 @@ Explanation: Rob house 1 (money = 2), rob house 3 (money = 9) and rob house 5 (m
 递归解法超时
 
 看了网上参考获知递推方程
+
+复习
+递推公式
+dp[i] = math.max(dp[i- 1],num[i] + dp[i - 2])
  */
 namespace LeetCode.Main.Easy {
 

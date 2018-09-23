@@ -1,14 +1,15 @@
 using System;
-using System.Text;
 using System.Collections.Generic;
+using System.Text;
+using LeetCode.Main.Toolkit;
+
 namespace LeetCode.Main {
-  using Toolkit;
-  
+
   public class LeetCodeSolution {
     static Random random = new Random((int)(System.DateTime.Now.Ticks >> 5));
-    public static int[] RandomData(int count){
+    public static int[] RandomData(int count) {
       var data = new int[count];
-      for(var i = 0; i < count; i++){
+      for (var i = 0; i < count; i++) {
         data[i] = random.Next(count);
       }
       return data;
@@ -17,8 +18,8 @@ namespace LeetCode.Main {
       Printer.print(t);
     }
 
-    public static void println(params object[] objs){
-      if(null != objs && objs.Length > 0){
+    public static void println(params object[] objs) {
+      if (null != objs && objs.Length > 0) {
         print(objs);
       }
       Printer.print('\n');
@@ -28,17 +29,17 @@ namespace LeetCode.Main {
       Printer.printArray(array);
     }
 
-    public static void printIEnumerable<T>(IEnumerable<T> enumerable){
+    public static void printIEnumerable<T>(IEnumerable<T> enumerable) {
       Printer.printEnumerable(enumerable);
     }
 
-    public static void printFormat(string format, params object[] objs){
+    public static void printFormat(string format, params object[] objs) {
       Printer.printFromat(format, objs);
     }
 
-    public static void print(params object[] objs){
+    public static void print(params object[] objs) {
       var sbd = new StringBuilder();
-      for(var i = 0; i < objs.Length - 1; i++){
+      for (var i = 0; i < objs.Length - 1; i++) {
         sbd.Append(objs[i].ToString()).Append(',');
       }
       sbd.Append(objs[objs.Length - 1]);

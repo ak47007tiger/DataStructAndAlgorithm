@@ -6,11 +6,15 @@ using System.IO;
 namespace LeetCode.Main.Toolkit {
   public class Printer {
     public static void print<T>(T t) {
+      Console.Write(t);
+    }
+
+    public static void println<T>(T t) {
       Console.WriteLine(t);
     }
 
     public static void printFromat(string format, params object[] objs) {
-      Console.WriteLine(string.Format(format, objs));
+      Console.Write(string.Format(format, objs));
     }
 
     public static void printArray<T>(params T[] array) {
@@ -22,7 +26,7 @@ namespace LeetCode.Main.Toolkit {
 
     public static void printEnumerable<T>(IEnumerable<T> enumerable) {
       foreach (var item in enumerable) {
-        Console.Write("{0},", item);        
+      Console.Write("{0},", item);
       }
     }
   }

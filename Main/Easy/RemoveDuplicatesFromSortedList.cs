@@ -17,12 +17,6 @@ Example 2:
 Input: 1->1->2->3->3
 Output: 1->2->3
    */
-  public class ListNode {
-    public int val;
-    public ListNode next;
-    public ListNode(int x) { val = x; }
-  }
-
   public class RemoveDuplicatesFromSortedList {
       /*
       1 从第一个起

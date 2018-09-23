@@ -3,14 +3,86 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+/*
+Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.
+
+Example:
+
+Input: [-2,1,-3,4,-1,2,1,-5,4],
+Output: 6
+Explanation: [4,-1,2,1] has the largest sum = 6.
+Follow up:
+
+If you have figured out the O(n) solution, try coding another solution using the divide and conquer approach, which is more subtle.
+ */
+/*
+暴力解法
+对所有可能的i,j段求和
+
+求最大最小或者，策略不同结果不同的问题，尝试动态规划
+递推公式
+dp是什么
+先确定dp[i]代表什么
+这样有2个输入确定一个范围，dp是范围做差
+sum[i],sum[i+k]
+dp(i,i+k) = sum[i+k] - sum[i]
+dp(i,j), dp(i-1,j)
+用最大的sum - 最小的sum
+ */
 namespace LeetCode.Main.Easy {
-  public class MaximumSubarrayClass {
+
+  public class MaximumSubarrayClass : LeetCodeSolution{
     public int MaxSubArray(int[] nums) {
       if (nums == null || nums.Length == 0)return 0;
 
       if (nums.Length == 1)return nums[0];
+      var sums = new int[nums.Length];
+      sums[0] = nums[0];
 
-      return MaxSubArray(nums, 0, nums.Length - 1);
+      var sumMaxIndex = 0;
+      var sumMax = sums[0];
+
+      var sumMinIndex = -1;
+      var sumMin = 0;
+      if(sums[0] < sumMin){
+        sumMinIndex = 0;
+        sumMin = sums[0];
+      }
+      var sumMin2 = sumMin;
+
+      for (var i = 1; i < sums.Length; i++) {
+        sums[i] = sums[i - 1] + nums[i];
+        if (sums[i] >= sumMax) {
+          sumMax = sums[i];
+          sumMaxIndex = i;
+        }
+        if (sums[i] < sumMin) {
+          sumMin2 = sumMin;
+          sumMin = sums[i];
+          sumMinIndex = i;
+        }
+      }
+      printArray(sums);
+      print(sumMinIndex, sumMaxIndex);
+      if (sumMinIndex < sumMaxIndex) {
+        return sumMax - sumMin;
+      }
+      if (sumMinIndex > sumMaxIndex) {
+        var maxMin = 0;
+        for (var i = 0; i < sumMaxIndex; i++) {
+          maxMin = Math.Min(maxMin, sums[i]);
+        }
+        if (sumMinIndex == sums.Length - 1) {
+          return Math.Max(sumMax - maxMin, sumMin - sumMin2);
+        } else {
+          var minMax = sums[sumMinIndex + 1];
+          for (var i = sumMinIndex + 2; i < sumMaxIndex; i++) {
+            minMax = Math.Max(minMax, sums[i]);
+          }
+          return Math.Max(sumMax - maxMin, minMax - sumMin);
+        }
+      }
+      return 0;
     }
 
     int MaxSubArray(int[] nums, int start, int end) {
