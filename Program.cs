@@ -1,10 +1,8 @@
 ﻿using System;
+using DataStruct;
 
-
-namespace LeetCode {
-  class Program {
-    static void Main(string[] args) {
-      LeetCode.Main.Client.Work(args);
-    }
+public class Program {
+  static void Main(string[] args) {
+    Client.Work(args);
   }
 }
