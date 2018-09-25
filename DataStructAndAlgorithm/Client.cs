@@ -10,8 +10,10 @@ using NiuKeWang;
 namespace DataStruct {
   public class Client : BaseSolution {
     public static void Work(string[] args) {
-      var solution = new PowN();
-
+      var root = BinaryTreeToolkit.BuildBinarySearchTree(new int[]{
+        5,3,2,4,7,6,8
+      });
+      new BreadthFirstTravelTree().Travel1(root);
       Console.ReadKey();
     }
   }

@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using DataStruct;
 
 /*
 Given a binary tree, find its minimum depth.
