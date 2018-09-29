@@ -10,10 +10,13 @@ using NiuKeWang;
 namespace DataStruct {
   public class Client : BaseSolution {
     public static void Work(string[] args) {
-      var solution = new FirstBadVersionCls();
+      var solution = new SelectCell();
+      for(var i = 0; i < 10; i++){
+        print(solution.SelectCount(i));
+        print(',');
+      }
       
-
-      print(solution.FirstBadVersion(3));
+      println(solution.SelectCount(4));
       Console.ReadKey();
     }
   }
