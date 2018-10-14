@@ -1,5 +1,5 @@
 ﻿using System;
-using DataStruct;
+using DataStructure;
 
 public class Program {
   static void Main(string[] args) {
