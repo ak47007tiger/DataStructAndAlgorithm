@@ -6,6 +6,10 @@ using DataStructure;
 
 namespace NiuKeWang {
   public class BreadthFirstTravelTree : BaseSolution {
+    /*
+    当前从队列中取出的那一个是上一层最后放进去的那一个的时候
+    表明达到一层的末尾，开始下一层了
+     */
     public void Travel1(TreeNode node) {
       if (node == null) {
         return;

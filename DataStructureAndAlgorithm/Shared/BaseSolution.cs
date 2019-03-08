@@ -14,15 +14,19 @@ namespace DataStructure {
       }
       return data;
     }
+
     public static void print<T>(T t) {
       Printer.print(t);
     }
 
     public static void println(params object[] objs) {
-      if (null != objs && objs.Length > 0) {
-        print(objs);
-      }
+      print(objs);
       Printer.print('\n');
+    }
+
+    public static void printComma(params object[] objs){
+      print(objs);
+      Printer.print(',');
     }
 
     public static void printArray<T>(params T[] array) {
@@ -38,6 +42,8 @@ namespace DataStructure {
     }
 
     public static void print(params object[] objs) {
+      if(objs == null || objs.Length == 0) return;
+
       var sbd = new StringBuilder();
       for (var i = 0; i < objs.Length - 1; i++) {
         sbd.Append(objs[i].ToString()).Append(',');

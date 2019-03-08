@@ -23,11 +23,11 @@ You may assume k is always valid, 1 ≤ k ≤ array's length.
 
 /*
 1 先排序，然后找，排序的同时去掉重复元素
-2 使用堆排序，构造大根堆
+2 使用堆排序，构造大根堆，执行k-1次删除顶部操作从，此时顶部元素为第k大
 3 从最大的往小找，找K次，找到第K大的
  */
 namespace LeetCode.Medium {
   public class KthLargestElementInAnArray :  BaseSolution{
-
+    
   }
 }
