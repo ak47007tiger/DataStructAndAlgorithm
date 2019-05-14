@@ -32,7 +32,13 @@ namespace DataStructure
 
         public static void Work(string[] args)
         {
-            printArray(new ShellSort().Sort(new int[]{3,1,66,23,9,15,8,6,70}));
+            // printArray(new ShellSort().Sort(new int[]{3,1,66,23,9,15,8,6,70}));
+            // printArray(new MergeSort().Sort(new int[]{3,1,66,23,9,15,8,6,70}));
+            var array = new int[]{3,1,66,23,9,15,8,6,70};
+            // var array = new int[]{2,11,3,9,12,};
+            // new MergeSort().Merge(array, 0, 1, array.Length);
+            // printArray(array);
+            printArray(new MergeSort().Sort(array));
             Console.ReadKey();
         }
     }
