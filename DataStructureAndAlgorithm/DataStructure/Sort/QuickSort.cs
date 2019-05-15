@@ -9,6 +9,10 @@ namespace DataStructure
    */
   public class QuickSort
   {
+    public int[] Sort(int[] array){
+      return Sort(array, 0, array.Length - 1);
+    }
+    
     //include start and end
     public int[] Sort(int[] array, int start, int end)
     {

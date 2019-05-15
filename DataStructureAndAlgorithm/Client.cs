@@ -35,8 +35,12 @@ namespace DataStructure
             var array = new int[]{3,1,9,66,23,9,15,8,6,70};
             // printArray(new QuickSort().Sort(array, 0, array.Length - 1));
             // printArray(new MergeSort().Sort(array, 0, array.Length - 1));
-            var sortObj = new HeapSort();
-            printArray(sortObj.Sort(array));
+            printArray(new QuickSort().Sort(array));
+            println();
+            printArray(new CountSort().Sort(array));
+            println();
+            // printArray(CountSort.countingSort(array));
+            printArray(CountSort.countSort(array));
             Console.ReadKey();
         }
     }
