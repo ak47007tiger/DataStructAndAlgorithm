@@ -14,12 +14,13 @@ namespace DataStructure
     public int[] Sort(int[] array)
     {
       var numLength = GetMaxValLength(array);
-      var bucket = new Stack<int>[numLength];
       for(var i = 0; i < numLength; i++){
-        bucket[i] = new Stack<int>();
-        for(var j = 0; j < array.Length; j++){
-        }
+        CountSort(array, i);
       }
+      return array;
+    }
+
+    public int[] CountSort(int[] array, int offset){
       return array;
     }
 

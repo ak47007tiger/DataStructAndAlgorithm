@@ -47,10 +47,13 @@ namespace DataStructure
       {
         int a = A[j];
         B[C[a] - 1] = a;
+        //用掉了一个，下次还有这个数就往前移动一位
         C[a] -= 1;
       }
     }
-
+// 0,1,2,3,4,5,6
+// 1,0,2,0,1,1,1
+// 1,1,3,3,4,5,6
     public static int[] countSort(int[] a)
     {
       int[] b = new int[a.Length];
