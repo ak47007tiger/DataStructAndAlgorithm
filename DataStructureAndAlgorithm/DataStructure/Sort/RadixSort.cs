@@ -14,26 +14,57 @@ namespace DataStructure
     public int[] Sort(int[] array)
     {
       var numLength = GetMaxValLength(array);
-      for(var i = 0; i < numLength; i++){
+      for (var i = 0; i < numLength; i++)
+      {
         CountSort(array, i);
       }
       return array;
     }
 
-    public int[] CountSort(int[] array, int offset){
+    public int[] CountSort(int[] array, int offset)
+    {
+      var maxVal = Toolkit.Math.Max(array);
+      var countArray = new int[10];
+
+      for (var i = 0; i < array.Length; i++)
+      {
+        var a = GetVal(array[i], offset);
+        countArray[a]++;
+      }
+
+      for (var i = 1; i < countArray.Length; i++)
+      {
+        countArray[i] = countArray[i] + countArray[i - 1];
+      }
+
+      var b = new int[array.Length];
+      for (var i = array.Length - 1; i >= 0; i--)
+      {
+        var a = GetVal(array[i], offset);
+        b[countArray[a] - 1] = array[i];
+        countArray[a]--;
+      }
+
+      for (var i = 0; i < array.Length; i++)
+      {
+        array[i] = b[i];
+      }
+
       return array;
     }
 
     //个位 offset = 0， 十位 offset = 1
-    public int GetVal(int val, int offset){
+    public static int GetVal(int val, int offset)
+    {
       var devide = 1;
-      for(var i = 0; i < offset; i++){
+      for (var i = 0; i < offset; i++)
+      {
         devide *= 10;
       }
       return val / devide % 10;
     }
 
-    public int GetMaxValLength(int[] array)
+    public static int GetMaxValLength(int[] array)
     {
       var max = array[0];
       for (var i = 0; i < array.Length; i++)

@@ -117,32 +117,6 @@ namespace DataStructure
 
       return b;
     }
-
-    //this is my sort
-    public int[] Sort1(int[] array)
-    {
-      var max = array[0];
-      for (var i = 1; i < array.Length; i++)
-      {
-        max = System.Math.Max(max, array[i]);
-      }
-
-      var countArray = new int[max + 1];
-      for (var i = 0; i < array.Length; i++)
-      {
-        countArray[array[i]]++;
-      }
-
-      var index = 0;
-      for (var i = 0; i < countArray.Length; i++)
-      {
-        for (var j = 0; j < countArray[i]; j++)
-        {
-          array[index] = i;
-          index++;
-        }
-      }
-      return array;
-    }
+    
   }
 }
