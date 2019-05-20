@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using DataStructure.Toolkit;
 using LeetCode.Easy;
 using LeetCode.Hard;
+using LeetCode;
 using LeetCode.Medium;
 using NiuKeWang;
 
@@ -42,7 +43,12 @@ namespace DataStructure
             // printArray(CountSort.countingSort(array));
             // printArray(CountSort.countSort(array));
             // printArray(new RadixSort().Sort(array));
-            printArray(new BucketSort().UniverseSort(array));
+            // printArray(new BucketSort().UniverseSort(array));
+            var inputs = new object[]{1,2,3,null,4};
+            var nodes = BinaryTreeToolkit.ToArray(inputs);
+            var tree = BinaryTreeToolkit.ToTree(nodes);
+            print(new _236_LowestCommonAncestorOfBT().LowestCommonAncestor(tree, nodes[2], nodes[4]).val);
+            println();
 
             Console.ReadKey();
         }
