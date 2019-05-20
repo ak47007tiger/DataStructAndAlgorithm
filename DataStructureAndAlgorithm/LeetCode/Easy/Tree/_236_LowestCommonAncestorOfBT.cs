@@ -1,7 +1,9 @@
 namespace LeetCode
 {
   using DataStructure;
-  public class _236_LowestCommonAncestorOfBT
+  using DataStructure.Toolkit;
+
+  public class _236_LowestCommonAncestorOfBT : BaseSolution
   {
     /*
     最低公共祖先
@@ -46,7 +48,8 @@ namespace LeetCode
         return pR;
       }
 
-      if(Contains(root,p) && Contains(root, q)){
+      if (Contains(root, p) && Contains(root, q))
+      {
         return root;
       }
 
@@ -65,6 +68,15 @@ namespace LeetCode
         return true;
       }
       return Contains(root.left, target) || Contains(root.right, target);
+    }
+
+    public static void Test()
+    {
+      var inputs = new object[] { 1, 2, 3, null, 4 };
+      var nodes = BinaryTreeToolkit.ToArray(inputs);
+      var tree = BinaryTreeToolkit.ToTree(nodes);
+      print(new _236_LowestCommonAncestorOfBT().LowestCommonAncestor(tree, nodes[2], nodes[4]).val);
+      println();
     }
 
   }
