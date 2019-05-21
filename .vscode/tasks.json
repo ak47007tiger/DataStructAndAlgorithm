@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/LeetCode.csproj"
+                "${workspaceFolder}/DataStructureAndAlgorithm.csproj"
             ],
             "problemMatcher": "$tsc"
         },
@@ -17,7 +17,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/LeetCode.csproj"
+                "${workspaceFolder}/DataStructureAndAlgorithm.csproj"
             ],
             "problemMatcher": "$tsc"
         },
@@ -28,7 +28,7 @@
             "args": [
                 "watch",
                 "run",
-                "${workspaceFolder}/LeetCode.csproj"
+                "${workspaceFolder}/DataStructureAndAlgorithm.csproj"
             ],
             "problemMatcher": "$tsc"
         }

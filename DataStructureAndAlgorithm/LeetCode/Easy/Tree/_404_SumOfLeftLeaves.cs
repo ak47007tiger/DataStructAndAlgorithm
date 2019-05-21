@@ -7,7 +7,12 @@ using DataStructure;
 using DataStructure.Toolkit;
 
 namespace LeetCode {
-  public class Name : BaseSolution {
+  /*
+  所有左叶子节点的和
+
+  前序遍历，如果是左叶子，加入和中
+   */
+  public class SumOfLeftLeaves : BaseSolution {
 
   }
 }

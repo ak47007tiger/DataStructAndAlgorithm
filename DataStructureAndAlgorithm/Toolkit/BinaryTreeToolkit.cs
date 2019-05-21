@@ -53,6 +53,10 @@ namespace DataStructure.Toolkit
       return ToTree(nodes);
     }
 
+    public static TreeNode CreateTree(params object[] objs){
+      return ToTree(ToArray(objs));
+    }
+
     public static TreeNode ToTree(TreeNode[] nodes)
     {
       if (nodes == null || nodes.Length == 0)

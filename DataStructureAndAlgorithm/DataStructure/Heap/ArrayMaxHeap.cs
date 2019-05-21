@@ -127,6 +127,25 @@ namespace DataStructure
       return top;
     }
 
+    public static void Test()
+        {
+            var array = new int[] { 2, 4, 6, 7, 8, 3, 2, 5 };
+            var solution = new ArrayMaxHeap();
+            solution.Build(array.Length);
+            foreach (var num in array)
+            {
+                solution.Insert(num);
+                BaseSolution.print(solution.GetTop());
+                BaseSolution.print(',');
+            }
+            BaseSolution.println();
+            while (solution.GetSize() > 0)
+            {
+                BaseSolution.print(solution.RemoveTop());
+                BaseSolution.print(',');
+            }
+        }
+
   }
 
 }

@@ -13,7 +13,7 @@ namespace DataStructure
 
     public int[] UniverseSort(int[] array)
     {
-      var max = Toolkit.Math.Max(array);
+      var max = Toolkit.MathEx.Max(array);
       //分区间
       var hashVal = 10;
       var bucketSize = System.Math.Max(max / hashVal, 1);

@@ -3,7 +3,7 @@ namespace LeetCode
   using DataStructure;
   using DataStructure.Toolkit;
 
-  public class _236_LowestCommonAncestorOfBT : BaseSolution
+  public class LowestCommonAncestorOfBT : BaseSolution
   {
     /*
     最低公共祖先
@@ -75,7 +75,7 @@ namespace LeetCode
       var inputs = new object[] { 1, 2, 3, null, 4 };
       var nodes = BinaryTreeToolkit.ToArray(inputs);
       var tree = BinaryTreeToolkit.ToTree(nodes);
-      print(new _236_LowestCommonAncestorOfBT().LowestCommonAncestor(tree, nodes[2], nodes[4]).val);
+      print(new LowestCommonAncestorOfBT().LowestCommonAncestor(tree, nodes[2], nodes[4]).val);
       println();
     }
 

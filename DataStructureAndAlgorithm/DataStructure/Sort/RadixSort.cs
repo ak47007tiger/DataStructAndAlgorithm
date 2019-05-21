@@ -23,7 +23,7 @@ namespace DataStructure
 
     public int[] CountSort(int[] array, int offset)
     {
-      var maxVal = Toolkit.Math.Max(array);
+      var maxVal = Toolkit.MathEx.Max(array);
       var countArray = new int[10];
 
       for (var i = 0; i < array.Length; i++)

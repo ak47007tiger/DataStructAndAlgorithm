@@ -6,7 +6,7 @@ using System.IO;
 namespace DataStructure.Toolkit
 {
 
-  public static class Math
+  public static class MathEx
   {
 
     public static int Max(int[] array)
