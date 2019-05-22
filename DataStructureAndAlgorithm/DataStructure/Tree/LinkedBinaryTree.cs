@@ -70,25 +70,21 @@ namespace DataStructure
       }
       var stack = new Stack<TreeNode>();
       var cur = node;
-      stack.Push(node);
-      while (stack.Count > 0)
+      /*
+      1 不断的把有左孩子的节点入栈，当没有左孩子的时候，处理结束，弹出栈顶，访问栈顶
+      2 对栈顶的右孩子重复1
+       */
+      //
+      //
+      while (stack.Count > 0 || cur != null)
       {
-        if (cur.left != null)
-        {
-          stack.Push(cur.left);
+        while(cur != null){
+          stack.Push(cur);
           cur = cur.left;
         }
-        else
-        {
-          cur = stack.Pop();
-          print(cur.val);
-          print(',');
-          if (cur.right != null)
-          {
-            stack.Push(cur.right);
-            cur = cur.right;
-          }
-        }
+        cur = stack.Pop();
+        //visit cur
+        cur = cur.right;
       }
     }
 

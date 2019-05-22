@@ -28,7 +28,7 @@ namespace DataStructure
       // printArray(new RadixSort().Sort(array));
       // printArray(new BucketSort().UniverseSort(array));
       //   LowestCommonAncesterOfBST.Test();
-      PathSumIII.Test();
+      UniqueBinarSearchTrees.Test();
       Console.ReadKey();
     }
   }
