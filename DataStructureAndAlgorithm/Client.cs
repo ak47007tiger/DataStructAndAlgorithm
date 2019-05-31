@@ -28,8 +28,15 @@ namespace DataStructure
       // printArray(new RadixSort().Sort(array));
       // printArray(new BucketSort().UniverseSort(array));
       //   LowestCommonAncesterOfBST.Test();
-      UniqueBinarSearchTrees.Test();
+      // UniqueBinarSearchTrees.Test();
+      println(63234f / 3600f);
+      println(57600f / 3600f);
       Console.ReadKey();
     }
+
+    public static bool IsChinese(char c){
+      return 0x4e00 <= c && c <= 0x9fbb;
+    }
+
   }
 }
