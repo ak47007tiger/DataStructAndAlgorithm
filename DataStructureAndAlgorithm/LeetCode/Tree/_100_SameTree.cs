@@ -37,7 +37,7 @@ Input:     1         1
 
 Output: false
  */
-namespace LeetCode.Easy {
+namespace LeetCode {
   
   public class SameTree {
     //

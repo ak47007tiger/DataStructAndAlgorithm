@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using DataStructure;
 
-namespace LeetCode.Easy {
+namespace LeetCode {
   /*
   Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
 

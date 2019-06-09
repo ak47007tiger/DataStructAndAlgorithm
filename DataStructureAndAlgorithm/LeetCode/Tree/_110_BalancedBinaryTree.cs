@@ -36,7 +36,7 @@ Given the following tree [1,2,2,3,3,null,null,4,4]:
 Return false.
  */
 
-namespace LeetCode.Easy {
+namespace LeetCode {
   public class BalancedBinaryTree {
     public bool IsBalanced(TreeNode root) {
       if(root == null) return true;

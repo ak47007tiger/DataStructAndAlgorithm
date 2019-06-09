@@ -43,7 +43,7 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
 /*
 第四次思考，递归要划分子问题，明确子问题要解决什么，比如这一题，是由数组生成bst，那么子问题也是要生成bst
  */
-namespace LeetCode.Easy {
+namespace LeetCode {
   public class ConvertSortedArrayToBinarySearchTree {
 
     public TreeNode SortedArrayToBST(int[] nums) {

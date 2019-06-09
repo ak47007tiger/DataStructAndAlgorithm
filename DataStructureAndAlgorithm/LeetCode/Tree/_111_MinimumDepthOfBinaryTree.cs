@@ -29,7 +29,7 @@ return its minimum depth = 2.
 题目明确说明是叶子节点，即没有左右子节点的节点到跟节点的层数才是深度
 第一次理解为只要出现没有左或者没有右节点就可以计算深度了
  */
-namespace LeetCode.Easy {
+namespace LeetCode {
   public class MinimumDepthOfBinaryTree {
     public int MinDepth(TreeNode root) {
       if(root == null) return 0;

@@ -53,7 +53,7 @@ return true, as there exist a root-to-leaf path 5->4->11->2 which sum is 22.
 
 在已有的知识里寻找解法，如果解不出来，根据题目增加知识，直到知识中包含了解法
  */
-namespace LeetCode.Easy {
+namespace LeetCode {
 
   public class PathSum {
     
