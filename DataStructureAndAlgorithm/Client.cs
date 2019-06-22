@@ -28,8 +28,9 @@ namespace DataStructure
       // printArray(new BucketSort().UniverseSort(array));
       //   LowestCommonAncesterOfBST.Test();
       // UniqueBinarSearchTrees.Test();
-      println(63234f / 3600f);
-      println(57600f / 3600f);
+      // println(63234f / 3600f);
+      // println(57600f / 3600f);
+      Queens8.TestQueens8();
       Console.ReadKey();
     }
 
