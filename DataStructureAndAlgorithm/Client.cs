@@ -11,8 +11,10 @@ namespace DataStructure
 {
   public class Client : BaseSolution
   {
-
-
+    /// <summary>
+    /// fwqef
+    /// </summary>
+    /// <param name="args"></param>
     public static void Work(string[] args)
     {
       var array = new int[] { 3, 1, 9, 66, 23, 9, 15, 8, 6, 70 };
@@ -33,7 +35,11 @@ namespace DataStructure
       Queens8.TestQueens8();
       Console.ReadKey();
     }
-
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="c"></param>
+    /// <returns></returns>
     public static bool IsChinese(char c){
       return 0x4e00 <= c && c <= 0x9fbb;
     }
