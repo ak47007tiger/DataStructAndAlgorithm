@@ -30,7 +30,11 @@ namespace DataStructure
       // UniqueBinarSearchTrees.Test();
       // println(63234f / 3600f);
       // println(57600f / 3600f);
-      Queens8.TestQueens8();
+      // Queens8.TestQueens8();
+      // printArray(new BubbleSort().Sort(array));
+      printArray(new QuickSort().Sort(array));
+      // printArray(new BubbleSort().Sort2(array));
+      println();
       Console.ReadKey();
     }
 

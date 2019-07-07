@@ -1,6 +1,9 @@
 namespace DataStructure
 {
 
+/*
+归并排序，分治、排序、合并
+ */
   public class MergeSort
   {
 
@@ -64,6 +67,10 @@ namespace DataStructure
       }
     }
 
+    /*
+    使用插入排序优化合并方法
+    不用创建新的数组，减少内存使用
+     */
     public void Merge2(int[] array, int from, int mid, int to)
     {
       for (var i = mid + 1; i <= to; i++)

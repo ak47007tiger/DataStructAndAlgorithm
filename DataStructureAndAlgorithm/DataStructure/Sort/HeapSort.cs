@@ -3,6 +3,10 @@ namespace DataStructure
 
   public class HeapSort
   {
+    /*
+    使用大根堆或者小根堆排序
+    先构建堆，然后不断移除对顶元素并将之放到数组，直到堆空，此时得到一个有序数组
+     */
     public int[] Sort(int[] array)
     {
       var maxRootHeap = new ArrayMaxHeap();

@@ -1,8 +1,4 @@
 /*
-计数排序使用一个额外的数组 {\displaystyle C}  C ，其中第i个元素是待排序数组 {\displaystyle A} A中值等于 {\displaystyle i} i的元素的个数。然后根据数组 {\displaystyle C}  C 来将 {\displaystyle A} A中的元素排到正确的位置。
- */
-
-/*
 输入：A
 新建数组B
 新建数组C，用index代表value，C[index] = value频率
@@ -28,6 +24,7 @@ namespace DataStructure
       return B;
     }
 
+    //无内存优化并且限定输入数组的大小
     private static void countingSort(int[] A, int[] B, int k)
     {
       int[] C = new int[k];
@@ -89,6 +86,7 @@ namespace DataStructure
 
     public int[] Sort(int[] array)
     {
+      //求最大最小值
       var max = array[0];
       var min = array[0];
       for (var i = 1; i < array.Length; i++)
@@ -97,20 +95,24 @@ namespace DataStructure
         min = System.Math.Min(min, array[i]);
       }
 
+      //计数，这里优化了内存
       var countArray = new int[max - min + 1];
       for (var i = 0; i < array.Length; i++)
       {
         countArray[array[i] - min]++;
       }
 
+      //二次计数，用来求算数值在新数组中的index
       for (var i = 1; i < countArray.Length; i++)
       {
         countArray[i] = countArray[i] + countArray[i - 1];
       }
 
+      //倒出数据
       var b = new int[array.Length];
       for (var i = array.Length - 1; i >= 0; i--)
       {
+        //index = 数量-1 - min
         countArray[array[i] - min]--;
         b[countArray[array[i] - min]] = array[i];
       }

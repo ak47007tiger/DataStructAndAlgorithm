@@ -15,8 +15,10 @@ namespace DataStructure
     public int[] Sort(int[] array)
     {
       var step = array.Length / 2;
+      //每一个不同的步长是一组数据
       while (step > 0)
       {
+        //使用步长把数据分组，对这一组数据进行插入排序
         for (var i = step; i < array.Length; i += step)
         {
           var temp = array[i];

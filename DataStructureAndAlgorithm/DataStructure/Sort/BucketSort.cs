@@ -11,6 +11,10 @@ namespace DataStructure
   public class BucketSort
   {
 
+    /*
+    带区间的桶排序，数据范围很大又不连续时，对数据划分区间，然后对区间内的数据排序，最后把数据倒出来
+    如果数据连续，那么申请的桶数组会有很多地方空着，浪费内存，有可能导致内存不足
+     */
     public int[] UniverseSort(int[] array)
     {
       var max = Toolkit.MathEx.Max(array);
@@ -45,20 +49,25 @@ namespace DataStructure
       return array;
     }
 
+    //一般的桶排序
     public int[] Sort(int[] array)
     {
+      //找到最大的数
       var max = array[0];
       for (var i = 1; i < array.Length; i++)
       {
         max = System.Math.Max(max, array[i]);
       }
 
+      //统计每个数出现的次数，max+1是因为有数值0存在
       var countArray = new int[max + 1];
       for (var i = 0; i < array.Length; i++)
       {
         countArray[array[i]]++;
       }
 
+      //桶里面装的是数i出现的次数
+      //把桶里的数倒出来
       var index = 0;
       for (var i = 0; i < countArray.Length; i++)
       {

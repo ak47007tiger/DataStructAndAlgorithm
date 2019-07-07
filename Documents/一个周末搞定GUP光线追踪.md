@@ -29,8 +29,31 @@ void OnRenderImage(RenderTexture source, RenderTexture dest) {
 ## 射线调度器
 
 ## 使用Unity的相机
+- 处理坐标转换，从NDC坐标 -> 相机坐标 -> 世界坐标
+- 需要用到
+  - 投影矩阵的逆矩阵
+  - 相机变换矩阵
 
 ## 深度
+- 射线的终点不设置在远剪裁面，而是设置在一个聚焦的距离
+- 代码
+```
+// Setup focal plane in camera space.
+vec4 focalPlane = vec4(0, 0, -_FocusDistance * 2, 1);
+// To NDC space.
+focalPlane = mul(_Projection, focalPlane);
+focalPlane /= focalPlane.w;
+// Ray Start / End in NDC space.
+vec4 rayStart = vec4(ndc.xy, 0, 1);
+vec4 rayEnd   = vec4(ndc.xy, focalPlane.z, 1);
+// Rays to camera space.
+rayStart = mul(_ProjectionI, rayStart);
+rayEnd = mul(_ProjectionI, rayEnd);
+// Rays to world space.
+rayStart = mul(_CameraI, rayStart / rayStart.w);
+rayEnd = mul(_CameraI, rayEnd / rayEnd.w);
+```
+- 在unity中提供了一个gameobject作为获得聚焦面板位置的信息源
 
 ## 游戏对象 & 材质更新
 - 提供光线追踪需要的数据
