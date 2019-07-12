@@ -62,9 +62,17 @@ namespace DataStructure
     public void Add(DoubleListNode node, int index)
     {
       var target = Get(index);
-      Remove(target);
-      Add(node);
-      Add(target);
+      var parent = target.pre;
+      parent.next = node;
+      node.pre = parent;
+      
+      node.next = target;
+      target.pre = node;
+    }
+
+    public void RemoveAllFrom(DoubleListNode node){
+      var parent = GetParent(node);
+      parent.next = null;
     }
 
     private void SetParentChild(DoubleListNode parent, DoubleListNode child)

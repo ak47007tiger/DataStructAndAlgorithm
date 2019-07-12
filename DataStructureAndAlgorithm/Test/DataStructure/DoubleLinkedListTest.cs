@@ -1,19 +1,19 @@
 namespace DataStructure
 {
 
-  public class SinglyLinkedListTest : BaseSolution
+  public class DoubleLinkedListTest : BaseSolution
   {
 
     public void SimpleTest()
     {
-      var list = new SinglyLinkedList();
+      var list = new DoubleLinkedList();
       println(list.IsEmpty());
 
-      list.Add(new ListNode(1));
+      list.Add(new DoubleListNode(1));
 
       println(list.IsEmpty());
 
-      list.Add(new ListNode(2));
+      list.Add(new DoubleListNode(2));
       println(list.Size());
 
       println(list.Get(1).val);
@@ -21,8 +21,8 @@ namespace DataStructure
       list.Remove(list.Get(0));
       println(list.Size());
 
-      list.Add(new ListNode(3));
-      list.Add(new ListNode(4), 1);
+      list.Add(new DoubleListNode(3));
+      list.Add(new DoubleListNode(4), 1);
 
       println(list.Get(list.Size() - 2).val);
 

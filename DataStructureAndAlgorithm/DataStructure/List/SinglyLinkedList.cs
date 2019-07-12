@@ -58,9 +58,14 @@ namespace DataStructure
     public void Add(ListNode node, int index)
     {
       var target = Get(index);
-      Remove(target);
+      RemoveAllFrom(target);
       Add(node);
       Add(target);
+    }
+
+    public void RemoveAllFrom(ListNode node){
+      var parent = GetParent(node);
+      parent.next = null;
     }
 
     public void Add(ListNode node)

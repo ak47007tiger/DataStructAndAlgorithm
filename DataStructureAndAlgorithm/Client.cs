@@ -32,8 +32,10 @@ namespace DataStructure
       // println(57600f / 3600f);
       // Queens8.TestQueens8();
       // printArray(new BubbleSort().Sort(array));
-      printArray(new QuickSort().Sort(array));
+      // printArray(new QuickSort().Sort(array));
       // printArray(new BubbleSort().Sort2(array));
+      new SinglyLinkedListTest().SimpleTest();
+      // new DoubleLinkedListTest().SimpleTest();
       println();
       Console.ReadKey();
     }
