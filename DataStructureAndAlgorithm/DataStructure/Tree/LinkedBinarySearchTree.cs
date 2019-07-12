@@ -7,7 +7,7 @@ namespace DataStructure
   1 链式结构
   2 放到右孩子
    */
-  public class BinarySearchTree
+  public class LinkedBinarySearchTree
   {
     TreeNode root;
     public TreeNode Find(int data)

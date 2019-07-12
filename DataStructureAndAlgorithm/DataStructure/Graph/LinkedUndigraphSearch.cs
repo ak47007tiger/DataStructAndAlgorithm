@@ -1,7 +1,8 @@
+using System.Collections.Generic;
 namespace DataStructure
 {
   
-  public class BasicGraph
+  public class LinkedGraphSearch
   {
     public void BFS()
     {

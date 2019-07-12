@@ -33,7 +33,9 @@ namespace DataStructure
       // println(63234f / 3600f);
       // println(57600f / 3600f);
       // Queens8.TestQueens8();
-      new CircularLinkedListTest().SimpleTest();
+      // new CircularLinkedListTest().SimpleTest();
+      // new ArrayBinaryTreeTest().SimpleTest();
+      new LinkedUndigraphTest().Test();
       Console.ReadKey();
     }
     /// <summary>
