@@ -45,7 +45,8 @@ namespace DataStructure
             // new TestDelegate().Test();
             // new TestMessageSystem().Test();
             // new TestDictionary().Test();
-            new TestHttp().Test();
+            // new TestHttp().Test();
+            new ArrayQueueTest().Test();
             Console.ReadKey();
         }
 
