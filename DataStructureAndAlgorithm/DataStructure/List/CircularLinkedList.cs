@@ -4,7 +4,7 @@
 
 namespace DataStructure {
 
-  public class CircylarLinkedList {
+  public class CircularLinkedList {
     ListNode head;
 
     public ListNode GetLast() {
@@ -59,6 +59,8 @@ namespace DataStructure {
         return;
       }
 
+      var parent = GetParent(node);
+      parent.next = node.next;
     }
 
     public ListNode Get(int index) {

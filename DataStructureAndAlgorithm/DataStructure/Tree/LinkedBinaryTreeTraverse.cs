@@ -1,7 +1,6 @@
 namespace DataStructure
 {
   using System.Collections.Generic;
-  using System;
 
   public class LinkedBinaryTree : BaseSolution
   {
