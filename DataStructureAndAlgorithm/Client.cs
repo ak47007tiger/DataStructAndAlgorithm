@@ -9,6 +9,7 @@ using NiuKeWang;
 using DataStructure.Test;
 using System.Text.RegularExpressions;
 using Test;
+using DataStructure.Practice;
 
 namespace DataStructure
 {
@@ -46,7 +47,9 @@ namespace DataStructure
             // new TestMessageSystem().Test();
             // new TestDictionary().Test();
             // new TestHttp().Test();
-            new ArrayQueueTest().Test();
+            // new ArrayQueueTest().Test();
+            // new StringFormatParamCnt().Test();
+            new TestNormalAndGenericCollection().Test();
             Console.ReadKey();
         }
 
