@@ -49,7 +49,8 @@ namespace DataStructure
             // new TestHttp().Test();
             // new ArrayQueueTest().Test();
             // new StringFormatParamCnt().Test();
-            new TestNormalAndGenericCollection().Test();
+            // new TestNormalAndGenericCollection().Test();
+            new Wealth.WealthMain().StartUp();
             Console.ReadKey();
         }
 
