@@ -10,7 +10,7 @@ namespace Wealth
         {
             var cfg = new WealthConfig()
             {
-                mChanYeZhai = 0.2f,
+                mChanYeZhai = 0.1f,
                 mXinYongZhai = 0.11f,
                 mChunZhai = 0.15f,
                 mHuoBi = 0.14f,
