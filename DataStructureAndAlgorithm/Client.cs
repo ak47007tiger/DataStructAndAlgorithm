@@ -50,7 +50,8 @@ namespace DataStructure
             // new ArrayQueueTest().Test();
             // new StringFormatParamCnt().Test();
             // new TestNormalAndGenericCollection().Test();
-            new Wealth.WealthMain().StartUp();
+            // new Wealth.WealthMain().StartUp();
+            new TaskAwaitAsync().TestWhile();
             Console.ReadKey();
         }
 

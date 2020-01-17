@@ -7,6 +7,33 @@ namespace Test
     public class TaskAwaitAsync
     {
 
+        public async void TestWhile(){
+            PrintThread("before while");
+            int cnt = 6;
+            while(true){
+                PrintThread("in while");
+                await FakeWork(1000);
+                PrintThread("after await in while");
+                cnt--;
+                if(cnt == 0){
+                    return;
+                }
+            }
+        }
+
+        public void PrintThread(string prefix){
+            Console.WriteLine($"{prefix} thread is : {Thread.CurrentThread.ManagedThreadId}");
+        }
+
+        public async Task FakeWork(int consume){
+            await Task.Run(()=>{
+                Thread.Sleep(consume);
+            });
+            // await Task.Factory.StartNew(()=>{
+            //     Thread.Sleep(consume);
+            // });
+        }
+
         public void TestMain()
         {
             Console.WriteLine("我是主线程，线程ID：{0}", Thread.CurrentThread.ManagedThreadId);
