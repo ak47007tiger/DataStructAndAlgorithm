@@ -51,7 +51,10 @@ namespace DataStructure
             // new StringFormatParamCnt().Test();
             // new TestNormalAndGenericCollection().Test();
             // new Wealth.WealthMain().StartUp();
-            new TaskAwaitAsync().TestWhile();
+            // new TaskAwaitAsync().TestWhile();
+            // new GUIDAndToken().TestGUID();
+            // TestImplictAndExplict.Test();
+            new ReverseSingleLinkedList().TestReverse();
             Console.ReadKey();
         }
 

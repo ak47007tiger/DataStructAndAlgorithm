@@ -9,6 +9,10 @@ namespace DataStructure
   {
     ListNode head;
 
+    public ListNode GetHead(){
+        return head;
+    }
+
     public bool IsEmpty()
     {
       return head == null;
